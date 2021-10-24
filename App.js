@@ -1,10 +1,8 @@
-{/*  
-  Bu uygulama 11-E Mert Akın tarafından demo olarak hazırlanmıştır. 
-  Hazırlarken kullandığım kaynak: https://www.youtube.com/watch?v=00HFzh3w1B8 
-*/}
 import React, {useState} from 'react';
-import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {Image, Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Task from './components/Task'
+import logo from './assets/logo.png'; 
+
 export default function App() {
   const[task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
@@ -25,7 +23,8 @@ const completeTask = (index) => {
     <View style={styles.container}>
       {/* günlük yapılacaklar */}
       <View style={styles.taskWrapper}>
-          
+        
+      <Image source={logo} style={{ alignSelf:'center', width: 130, height: 130 }} /> 
            <Text style={styles.sectionTitle}>Günlük İşler</Text>
           
 
